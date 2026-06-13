@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-</head> <style>
+    <style>
         /* --- CSS VARIABLES & RESET --- */
         :root {
             --primary: #22C55E;       /* Vibrant Green */
@@ -26,9 +26,8 @@
             --nav-height: 60px;
             --header-height: 60px;
         }
-</style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
-       body { background-color: #F9FAFB; color: var(--dark); padding-bottom: calc(var(--nav-height) + 20px); overflow-x: hidden; }
+        body { background-color: #F9FAFB; color: var(--dark); padding-bottom: calc(var(--nav-height) + 20px); overflow-x: hidden; }
         a { text-decoration: none; color: inherit; }
         button { cursor: pointer; border: none; outline: none; font-family: inherit; }
         input, select, textarea { width: 100%; padding: 12px; border: 1px solid #E5E7EB; border-radius: 8px; font-size: 14px; margin-bottom: 12px; }
@@ -47,7 +46,8 @@
         .rounded-lg { border-radius: var(--radius); }
         .hidden { display: none !important; }
         .badge { padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
-        .badge-off { background: #FEF3C7; color: #D97706; }        .btn { padding: 12px 20px; border-radius: 8px; font-weight: 600; transition: 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+        .badge-off { background: #FEF3C7; color: #D97706; }
+        .btn { padding: 12px 20px; border-radius: 8px; font-weight: 600; transition: 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
         .btn-primary { background: var(--primary); color: white; }
         .btn-primary:hover { background: var(--primary-dark); }
         .btn-outline { border: 1px solid #E5E7EB; background: white; color: var(--dark); }
@@ -77,7 +77,7 @@
         .cat-chip.active, .cat-chip:hover { background: var(--primary); color: white; border-color: var(--primary); }
 
         .section-title { font-size: 18px; font-weight: 700; margin: 24px 0 12px; display: flex; justify-content: space-between; align-items: center; }
-        .trust-badge { background: #FFFBEB; border: 1px solid #FDE68A; color: #92400E; padding: 12px; border-radius: 8px; font-size: 13px; text-align: center; margin: 20px 0; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .trust-badge { background: #FFFBEB; border: 1px solid #FDE68A; color: #92400E; padding: 12px; border-radius: 8px; font-size: 13px; text-align: center; margin: 20px 0; display: flex; align-items: center; justify-content: center; }
         .payment-options { display: flex; gap: 12px; justify-content: center; margin-top: 8px; font-size: 18px; color: var(--gray); }
 
         /* --- PRODUCT CARDS --- */
@@ -96,11 +96,12 @@
         .card-btn:hover { background: var(--primary); color: white; }
         .discount-tag { position: absolute; top: 8px; left: 8px; background: var(--secondary); color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; z-index: 2; }
 
-        /* --- BOTTOM NAVIGATION --- */        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; height: var(--nav-height); background: var(--white); border-top: 1px solid #E5E7EB; display: flex; justify-content: space-around; align-items: center; z-index: 50; padding-bottom: env(safe-area-inset-bottom); }
+        /* --- BOTTOM NAVIGATION --- */
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; height: var(--nav-height); background: var(--white); border-top: 1px solid #E5E7EB; display: flex; align-items: center; z-index: 50; }
         .nav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; color: var(--gray); font-size: 10px; font-weight: 500; background: none; padding: 8px; flex: 1; }
         .nav-item i { font-size: 20px; margin-bottom: 2px; }
         .nav-item.active { color: var(--primary); }
-        .nav-post { background: var(--primary); color: white !important; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: -20px; box-shadow: 0 4px 10px rgba(34,197,94,0.4); border: 4px solid var(--white); }
+        .nav-post { background: var(--primary); color: white !important; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: -25px; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4); }
         .nav-post i { font-size: 24px; margin: 0; }
 
         /* --- AUTH VIEW --- */
@@ -109,13 +110,13 @@
         .auth-header i { font-size: 48px; color: var(--primary); margin-bottom: 12px; }
         .divider { display: flex; align-items: center; gap: 12px; margin: 20px 0; color: var(--gray); font-size: 12px; }
         .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: #E5E7EB; }
-        .google-btn { background: white; border: 1px solid #E5E7EB; color: var(--dark); width: 100%; padding: 12px; border-radius: 8px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 16px; }
+        .google-btn { background: white; border: 1px solid #E5E7EB; color: var(--dark); width: 100%; padding: 12px; border-radius: 8px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; }
         .google-btn:hover { background: #F9FAFB; }
 
         /* --- MODALS --- */
-        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; display: flex; align-items: flex-end; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; display: flex; align-items: flex-end; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
         .modal-overlay.open { opacity: 1; pointer-events: all; }
-        .modal-content { background: var(--white); width: 100%; max-width: 500px; max-height: 90vh; border-radius: 20px 20px 0 0; padding: 24px; overflow-y: auto; transform: translateY(100%); transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+        .modal-content { background: var(--white); width: 100%; max-width: 500px; max-height: 90vh; border-radius: 20px 20px 0 0; padding: 24px; overflow-y: auto; transform: translateY(100%); transition: transform 0.3s ease; }
         .modal-overlay.open .modal-content { transform: translateY(0); }
         @media(min-width: 768px) { 
             .modal-overlay { align-items: center; } 
@@ -128,12 +129,27 @@
         .empty-state h3 { font-size: 18px; color: var(--dark); margin-bottom: 8px; }
 
         /* --- TOAST --- */
-        .toast { position: fixed; top: 80px; left: 50%; transform: translateX(-50%) translateY(-20px); background: var(--dark); color: white; padding: 12px 24px; border-radius: 30px; font-size: 14px; font-weight: 500; z-index: 200; opacity: 0; transition: 0.3s; pointer-events: none; white-space: nowrap; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .toast { position: fixed; top: 80px; left: 50%; transform: translateX(-50%) translateY(-20px); background: var(--dark); color: white; padding: 12px 24px; border-radius: 30px; font-size: 12px; opacity: 0; transition: all 0.3s ease; z-index: 200; }
         .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
         /* --- PAYMENT TABS --- */
         .pay-tabs { display: flex; gap: 8px; margin-bottom: 16px; overflow-x: auto; padding-bottom: 4px; }
-        .pay-tab { padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; white-space: nowrap; background: var(--light-gray); color: var(--gray); border: 1px solid transparent; }
+        .pay-tab { padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; white-space: nowrap; background: var(--light-gray); color: var(--gray); border: 1px solid transparent; cursor: pointer; transition: 0.2s; }
         .pay-tab.active { background: #DCFCE7; color: #166534; border-color: #86EFAC; }
         .pay-section { display: none; }
-        .pay
+        .pay-section.active { display: block; }
+    </style>
+</head>
+<body>
+
+<header class="flex items-center justify-between">
+    <div class="logo">
+        <i class="fas fa-rocket"></i> Nova Market
+    </div>
+    <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search products...">
+    </div>
+</header>
+
+<body>
